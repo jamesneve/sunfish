@@ -1,0 +1,8 @@
+.DS_STORE
+
+main.go
+
+.idea/
+.go-version
+
+*.csv
