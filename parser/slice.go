@@ -1,8 +1,8 @@
-package sunfish
+package parser
 
 import "reflect"
 
-func MakeNewElemFunction(sliceElementType reflect.Type) func() reflect.Value {
+func makeNewElemFunction(sliceElementType reflect.Type) func() reflect.Value {
 	var newElemFunc func() reflect.Value
 	if sliceElementType.Kind() == reflect.Ptr {
 		newElemFunc = func() reflect.Value {
@@ -17,7 +17,7 @@ func MakeNewElemFunction(sliceElementType reflect.Type) func() reflect.Value {
 	return newElemFunc
 }
 
-func MakeSliceValueSetFunc(sliceElementType reflect.Type, sliceValue reflect.Value) func(*reflect.Value) {
+func makeSliceValueSetFunc(sliceElementType reflect.Type, sliceValue reflect.Value) func(*reflect.Value) {
 	var sliceValueSetFunc func(*reflect.Value)
 	if sliceElementType.Kind() == reflect.Ptr {
 		sliceValueSetFunc = func(newValue *reflect.Value) {
