@@ -11,7 +11,7 @@ With a CSV file (for example, recipes.csv below):
 ```
 user_id,recipe
 33,How to boil an egg: Put it in hot water and wait for a while
-45,How to cook a sunfish: You should never cook a sunfish, you monster
+45,How to cook a sunfish: You should never cook a sunfish you monster
 ```
 
 Parse the file into the struct by creating a reader and reading from a file. Only rows marked by `csv:"parse"` will be parsed.
@@ -41,7 +41,7 @@ For a CSV without headers e.g.
 
 ```
 33,How to boil an egg: Put it in hot water and wait for a while
-45,How to cook a sunfish: You should never cook a sunfish, you monster
+45,How to cook a sunfish: You should never cook a sunfish you monster
 ```
 
 Define your struct with the fields you want to parse labelled `parse`
