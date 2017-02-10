@@ -30,6 +30,7 @@ func (r *ParserImpl) ReadCsvFromFileInOrder(fileName string, ents interface{}) e
 	if err != nil {
 		return err
 	}
+	defer f.Close()
 
 	return r.ReadCsvInOrder(f, ents)
 }
@@ -39,6 +40,7 @@ func (r *ParserImpl) ReadCsvFromFileWithHeaders(fileName string, ents interface{
 	if err != nil {
 		return err
 	}
+	defer f.Close()
 
 	return r.ReadCsvWithHeaders(f, ents)
 }
